@@ -12,7 +12,7 @@ dim="\e[2m"
 undim="\e[0m"
 
 # disks to check
-disks=(sda sdb sdc sdd sde sdf sdg sdi)
+disks=(sda)
 logfiles='/var/log/syslog /var/log/syslog.1'
 
 # get all lines with smartd entries from syslog
