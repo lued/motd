@@ -7,7 +7,7 @@ green="\e[1;32m"
 red="\e[1;31m"
 undim="\e[0m"
 
-services=("fail2ban" "ufw" "pveproxy" "docker" "smartd")
+services=("fail2ban" "ufw" "wg-quick@wg0" "apparmor" "docker")
 # sort services
 IFS=$'\n' services=($(sort <<<"${services[*]}"))
 unset IFS
