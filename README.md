@@ -1,7 +1,8 @@
 # Message of the Day
 
-Collection of my 'Message of the Day' scripts.
+![screenshot](https://i.imgur.com/siN4eyG.png)
 
+Collection of my 'Message of the Day' scripts.
 
 ### Requirements
 
@@ -31,3 +32,13 @@ You have to enable smartd monitoring & run regular self-tests for it to display 
 
 If you use `50-fail2ban` you should comment out the `compress` option in `/etc/logrotate.d/fail2ban`,
 s.t. the logs are not compressed and can be grepped.
+
+
+# Install
+```
+git clone https://github.com/lued/motd
+sudo apt install cowsay fail2ban figlet lolcat fortune-mod -y
+sudo mv /etc/update-motd.d /etc/update-motd.d.bak
+sudo mv ./motd /etc/update-motd.d/
+sudo run-parts /etc/update-motd.d/
+```
